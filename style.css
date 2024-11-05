@@ -1,0 +1,104 @@
+:root {
+  --primary: #2196F3;
+  --dark: #1976D2;
+  --light: #BBDEFB;
+  --text: #212121;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.tutorial {
+  background: var(--light);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tutorial h3 {
+  margin: 0 0 10px 0;
+  color: var(--dark);
+}
+
+.tutorial-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tutorial-steps li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tutorial-steps li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.editor-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tools, .canvas-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  max-width: 100%;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.tool-group {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid var(--light);
+  border-radius: 6px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.filter-btn, button, .file-label {
+  padding: 8px 10px;
+  font-size: 0.9em;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+button:hover, .file-label:hover {
+  background: var(--dark);
+}
