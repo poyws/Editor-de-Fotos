@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor de Fotos Básico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Editor de Fotos Profissional</h1>
+    </div>
+
+    <div class="tutorial">
+      <h3>Como usar:</h3>
+      <ul class="tutorial-steps">
+        <li>Escolha uma imagem do seu computador</li>
+        <li>Use os controles para ajustar o tamanho</li>
+        <li>Aplique filtros e ajustes de cor</li>
+        <li>Selecione uma área para cortar</li>
+        <li>Faça o download da sua imagem editada</li>
+      </ul>
+    </div>
+
+    <div class="editor-container">
+      <div class="tools">
+        <div class="tool-group">
+          <label class="file-label" for="imageInput">Escolher Imagem</label>
+          <input type="file" id="imageInput" class="file-input" accept="image/*" />
+        </div>
+
+        <div class="tool-group">
+          <h2>Redimensionar</h2>
+          <label>Largura:</label>
+          <input type="range" id="widthRange" min="10" max="1000" value="300" />
+          <span id="widthValue">300px</span>
+
+          <label>Altura:</label>
+          <input type="range" id="heightRange" min="10" max="1000" value="300" />
+          <span id="heightValue">300px</span>
+        </div>
+
+        <div class="tool-group">
+          <h2>Ajustes</h2>
+          <label>Brilho:</label>
+          <input type="range" id="brightnessRange" min="-100" max="100" value="0" />
+
+          <label>Contraste:</label>
+          <input type="range" id="contrastRange" min="-100" max="100" value="0" />
+
+          <label>Saturação:</label>
+          <input type="range" id="saturationRange" min="-100" max="100" value="0" />
+
+          <label>Matiz:</label>
+          <input type="range" id="hueRange" min="-180" max="180" value="0" />
+        </div>
+
+        <div class="tool-group">
+          <h2>Filtros</h2>
+          <div class="filters">
+            <button class="filter-btn" data-filter="grayscale">P&B</button>
+            <button class="filter-btn" data-filter="sepia">Sépia</button>
+            <button class="filter-btn" data-filter="invert">Inverter</button>
+            <button class="filter-btn" data-filter="blur">Desfoque</button>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <button id="cropBtn">Cortar Seleção</button>
+          <button id="resetBtn">Resetar</button>
+          <button id="downloadBtn">Download</button>
+        </div>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
